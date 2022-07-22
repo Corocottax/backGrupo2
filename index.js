@@ -29,7 +29,7 @@ app.use(express.json({
 
 app.use(express.urlencoded({ limit: '5mb', extended: true }))
 
-app.use('/api/user', UserRoutes)
+app.use('/users', UserRoutes)
 
 app.use('*', (req, res, next) => {
     return next(setError(404, 'Route not found'))
